@@ -1,0 +1,62 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.overflow-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+    /* New properties */
+    margin-left: -100px;
+    margin-right: -100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.sidebar {
+    width: 15%;
+    padding: 1em;
+    background: #ddd;
+    overflow-y: auto;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100px);
+}
+
+.main-content {
+    width: 85%;
+    padding: 1em;
+    background: #eee;
+    overflow-y: auto;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(100px);
+}
+
+/* Show classes with animation */
+.sidebar.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.main-content.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    visibility: hidden;
+}

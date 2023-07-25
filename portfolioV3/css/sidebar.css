@@ -1,0 +1,43 @@
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    order: 1;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sidebar-gap);
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 15px; 
+}
+
+.socials img {
+    height: 28px;
+    width: 28px;
+}

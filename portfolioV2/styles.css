@@ -1,0 +1,364 @@
+/* Global CSS Variables */
+:root {
+    --sidebar-gap: 10px; 
+    --sidebar-logo-gap: 0px;
+
+    /* Default (light) mode colors */
+    --background-color: white;
+    --text-color: #333;
+    --footer-background-color: #f5f5f5;
+    --button-background-color: #f0f0f0;
+    --button-text-color: #333;
+    --button-background-hover-color: #e0e0e0;
+}
+
+/* Dark mode */
+.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #ddd;
+    --footer-background-color: #2b2b2b;
+    --button-background-color: #333;
+    --button-text-color: #f0f0f0;
+    --button-background-hover-color: #444;
+}
+
+/* Styles applying to whole HTML */
+body {
+    /* Flex container vertical layout */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    /* No horizontal scrolling */
+    overflow-x: hidden;
+
+    /* Color variables */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Container styling wrapping page content */
+#page-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+#sidebar {
+    /* Sets up the sidebar as a flex container with a vertical layout */
+    display: flex;
+    flex-direction: column;
+    
+    /* Aligns items to the center of the sidebar */
+    align-items: center;
+    
+    /* Gives equal space around items */
+    justify-content: center;
+    gap: 50px;
+    
+    /* Basic style properties */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    
+    /* Apply color variables */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+    /* Display order in a flex or grid layout (1 means it's displayed first) */
+    order: 1;
+}
+
+/* Styles for the list of links in the sidebar */
+#sidebar ul {
+    /* Removes list styling */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Sets up as a flex container with a vertical layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Creates a gap between list items */
+    gap: var(--sidebar-gap);
+}
+
+/* Styles for the links themselves */
+#sidebar ul li a {
+    /* Removes the default underline */
+    text-decoration: none;
+    
+    /* Apply color variable */
+    color: var(--text-color);
+    
+    /* Makes the text bold */
+    font-weight: bold;
+}
+
+/* Styles for the logo and name container */
+#logo-name-container {
+    /* Sets up as a flex container with a vertical layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the main content area */
+#main-content {
+    /* Basic style properties */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Enable vertical scrolling if the content overflows */
+    overflow-y: auto;
+    
+    /* Display order in a flex or grid layout (2 means it's displayed second) */
+    order: 2;
+    
+    /* Apply color variables */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Styles for the images in the main content area */
+#main-content img {
+    /* The image should take up the full width of the container */
+    width: 100%;
+    
+    /* The height of the image should scale proportionally */
+    height: auto;
+}
+
+/* Styles for the social links container */
+.socials {
+    /* Sets up as a flex container with a horizontal layout */
+    display: flex;
+    
+    /* Centers the items in the container */
+    justify-content: center;
+    
+    /* Adds padding to the top of the container */
+    padding-top: 25px;
+    
+    /* Creates a gap between the social link images */
+    gap: 15px; 
+}
+
+/* Styles for the social link images */
+.socials img {
+    /* Sets the size of the images */
+    height: 28px;
+    width: 28px;
+}
+
+/* Styles for the footer */
+#footer {
+    /* Sets up as a flex container with a horizontal layout */
+    display: flex;
+    
+    /* Centers the content in the footer */
+    justify-content: center;
+    align-items: center;
+    
+    /* Basic style properties */
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0;
+    
+    /* Apply color variable */
+    color: var(--text-color);
+    
+    /* Sets the background color */
+    background-color: var(--footer-background-color);
+}
+
+/* Styles for the pfp in the sidebar */
+#logo {
+    /* Sets the size of the pfp */
+    height: 200px;
+    width: 200px;
+    
+    /* Adds margin to the bottom of the pfp */
+    margin-bottom: var(--sidebar-logo-gap);
+}
+
+/* Styles for the additional content area */
+#additional-content {
+    /* Basic style properties */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Enable vertical scrolling if the content overflows */
+    overflow-y: auto;
+    
+    /* Display order in a flex or grid layout (3 means it's displayed third) */
+    order: 3;
+    
+    /* Apply color variables */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Styles for the images in the additional content area */
+#additional-content img {
+    /* The image should take up the full width of the container */
+    width: 100%;
+    
+    /* The height of the image should scale proportionally */
+    height: auto;
+}
+
+/* Set the font size and padding */
+#theme-switcher {
+    font-size: 0.9em;
+    
+    /* Adjust the width and height for a bigger button */
+    width: 160px;
+    height: 30px;
+    
+    /* Remove borders and increase the border radius for a rounded appearance */
+    border: none;
+    border-radius: 15px; /* Increased border radius for a bigger curve */
+    
+    /* Apply background and text color using CSS variables */
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    
+    /* Change the cursor to a pointer on hover to indicate interactivity */
+    cursor: pointer;
+    
+    /* Add a smooth transition effect on background-color changes */
+    transition: background-color 0.3s ease;
+    
+    /* Add a box shadow for a 3D effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    /* Add a subtle animation on hover to make it pop */
+    transform: scale(1);
+}
+
+/* Styles for the theme toggle button on hover state */
+#theme-switcher:hover {
+    /* Change the background color when the button is hovered over */
+    background-color: var(--button-background-hover-color);
+    
+    /* Add a slightly bigger scale on hover for a cool effect */
+    transform: scale(1.05);
+    
+    /* Add a smooth transition for the scale effect */
+    transition: transform 0.2s ease;
+}
+
+/* Styles for screens bigger than 1389px */
+@media screen and (min-width: 1389px) {
+    /* Styles for the page container */
+    #page-wrap {
+        /* Changes the layout to a column and activates the flexbox layout */
+        flex-direction: column;
+        display: flex;
+    }
+
+    /* Styles for the sidebar */
+    #sidebar {
+        /* Fixes the sidebar to the side of the viewport */
+        position: fixed;
+        
+        /* Adjusts the width and padding of the sidebar */
+        padding-left: 39px;
+        width: 15%;
+        
+        /* Makes the sidebar the full height of the viewport, minus the footer height */
+        height: calc(100vh - 50px);
+        
+        /* Changes the display order of the sidebar */
+        order: 0;
+        
+        /* Activates the flexbox layout and changes the direction to a column */
+        display: flex;
+        flex-direction: column;
+        
+        /* Centers the items vertically and spaces them evenly */
+        align-items: center;
+        justify-content: space-around;
+        
+        /* Applies the background color variable to the sidebar */
+        background-color: var(--background-color);
+    }
+
+    /* Styles for the list within the sidebar */
+    #sidebar ul {
+        /* Activates the flexbox layout and changes the direction to a column */
+        display: flex;
+        flex-direction: column;
+        
+        /* Centers the items vertically */
+        align-items: center;
+    }
+
+    /* Styles for the main content */
+    #main-content {
+        /* Adjusts the width of the main content and sets a left margin */
+        width: 85%;
+        margin-left: 15%;
+        
+        /* Sets the height to auto and ensures a minimum height */
+        height: auto;
+        min-height: calc(100vh - 50px); /* Subtract footer height */
+        
+        /* Changes the display order of the main content */
+        order: 1;
+        
+        /* Applies the background color variable to the main content */
+        background-color: var(--background-color);
+    }
+
+    /* Styles for the logo */
+    #logo {
+        /* Adjusts the width and height of the logo */
+        height: 150px;
+        width: 150px;
+    }
+
+    /* Styles for the additional content */
+    #additional-content {
+        /* Adjusts the width of the additional content and sets a left margin */
+        width: 85%;
+        margin-left: 15%;
+        
+        /* Sets the height to auto and ensures a minimum height */
+        height: auto;
+        min-height: calc(100vh - 50px); /* Subtract footer height */
+        
+        /* Changes the display order of the additional content */
+        order: 2;
+        
+        /* Applies the background color variable to the additional content */
+        background-color: var(--background-color);
+    }
+
+    /* Styles for the footer */
+    #footer {
+        /* Sets the position of the footer to static */
+        position: static;
+        
+        /* Adjusts the width of the footer */
+        width: 100%;
+        
+        /* Changes the display order of the footer */
+        order: 3;
+        
+        /* Applies the footer background color variable to the footer */
+        background-color: var(--footer-background-color);
+    }
+}
+

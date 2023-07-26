@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
 
     // gif fade out
     if (scrollHeight > gifHeight * 0.15) {
-        let opacity = 1 - (scrollHeight - gifHeight * 0.15) / (gifHeight * 0.85);
+        let opacity = 1 - (scrollHeight - gifHeight * 0.15) / (gifHeight * 0.65);
         opacity = opacity < 0 ? 0 : opacity;
         gifElement.style.opacity = opacity.toString();
     }

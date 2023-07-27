@@ -1,0 +1,140 @@
+/* CSS Document */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* preset variables for dark-mode colors */
+:root {
+  --dark-background: #181818;
+  --dark-hover: #303030;
+  --dark-text: #ffffff;
+  --dark-alt-background: #252525;
+  --dark-button: #454545;
+  --dark-link: #cccccc;
+  --dark-highlight: #ffbd42;
+  --dark-error: #ff6347;
+}
+
+
+
+/* gif container that takes up the entire screen */
+.gif-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--dark-background);
+}
+
+/* gif container image that makes image the size of the screen
+and centers it */
+.gif-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* content-container that takes up the entire page of the screen */
+.content-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* sidebar-container in content-container that takes up the left 20% of the screen and the entire height of the screen */
+.sidebar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    background-color: var(--dark-alt-background);
+}
+
+.sidebar-container p {
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* main-content in content-container that takes up the right 80% of the screen and the entire height of the screen */
+.main-content {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    background-color: var(--dark-background);
+}
+
+/* sidebar-container header that takes up 10% of the sidebar-container */
+.main-content h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--dark-text);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* sidebar-container list that takes up 90% of the sidebar-container */
+.main-content p {
+    font-size: 1em;
+    color: var(--dark-text);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* This is for screens smaller than 1389px */
+@media screen and (max-width: 1388px) {
+    /* content-container that takes up the entire page of the screen */
+    .content-container {
+        height: 200%; /* Double the height */
+    }
+
+    /* main-content in content-container that takes up the entire width and 50% height of the screen */
+    .main-content {
+        width: 100%;
+        height: 50%;
+        left: 0; /* no longer needs to be positioned to the right */
+    }
+
+    /* sidebar-container in content-container that takes up the entire width and 50% height of the screen, positioned below main-content */
+    .sidebar-container {
+        width: 100%;
+        height: 50%;
+        top: 50%;
+    }
+}
+
+/* This is for screens equal to or larger than 1389px */
+@media screen and (min-width: 1389px) {
+    /* content-container that takes up the entire page of the screen */
+    .content-container {
+        height: 100%;
+    }
+
+    /* main-content in content-container that takes up the right 80% of the screen and the entire height of the screen */
+    .main-content {
+        width: 80%;
+        height: 100%;
+        left: 20%; /* positioned to the right of the sidebar-container */
+    }
+
+    /* sidebar-container in content-container that takes up the left 20% of the screen and the entire height of the screen */
+    .sidebar-container {
+        width: 20%;
+        height: 100%;
+        top: 0;
+    }
+}

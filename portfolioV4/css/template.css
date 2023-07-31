@@ -1,0 +1,5 @@
+#template-content {
+    width: 100%;  /* Use 100% of the width of the parent container */
+    height: 100%; /* Use 100% of the height of the parent container */
+    overflow: auto; /* Add scrollbars if the content exceeds the size of the container */
+}

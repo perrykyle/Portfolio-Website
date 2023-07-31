@@ -1,0 +1,6 @@
+/* This is portfolio.css */
+#portfolio-content {
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--dark-text);
+}

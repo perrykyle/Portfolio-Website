@@ -1,15 +1,3 @@
-/* preset variables for dark-mode colors */
-:root {
-    --dark-background: #181818;
-    --dark-hover: #303030;
-    --dark-text: #ffffff;
-    --dark-alt-background: #252525;
-    --dark-button: #454545;
-    --dark-link: #cccccc;
-    --dark-highlight: #ffbd42;
-    --dark-error: #ff6347;
-  }
-
 #sidebar {
     display: flex;
     flex-direction: column;

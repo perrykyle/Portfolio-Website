@@ -1,0 +1,6 @@
+/* This is skills.css */
+#skills-content {
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--dark-text);
+}

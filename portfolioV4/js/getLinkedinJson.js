@@ -16,6 +16,7 @@ async function fetchDataAndStoreContainerId() {
         // Returns the first (most recent) container ID
         const response = await axios.request(options);
         const data = response.data;
+        console.log(data);
         const containerId = getFirstId(data);
         //console.log('Container ID:', containerId);
 

@@ -1,0 +1,72 @@
+:root {
+    --background-color: #121212;
+    --text-color: #FFFFFF;
+    --gif-container-color: #1E1E1E;
+    --sidebar-color: #242424;
+    --main-content-color: #2E2E2E;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.gif-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--gif-container-color);
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+}
+
+.content-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.sidebar {
+    flex: 30%;
+    overflow-y: auto;
+    background-color: var(--sidebar-color);
+    order: 1; /* Ensures the sidebar is always to the left of the main content in desktop mode */
+}
+
+.main-content {
+    flex: 70%;  
+    overflow-y: auto;
+    background-color: var(--main-content-color);
+    order: 2; /* Ensures the main content is always to the right of the sidebar in desktop mode */
+}
+
+/* Breakpoint for screen sizes less than 767px */
+@media screen and (max-width: 767px) {
+    .content-container {
+        flex-direction: column; /* Stack the sidebar and main content vertically */
+        height: auto; /* Let the height be the combined height of sidebar and main content */
+    }
+    
+    .sidebar, .main-content {
+        flex: none; /* Take up natural width */
+        width: 100%; /* Take up full width of the content-container */
+        height: 100vh; /* The height to 100% of the viewport height */
+    }
+
+    .main-content {
+        order: 1; /* Make main content appear first in mobile mode */
+    }
+
+    .sidebar {
+        order: 2; /* Make sidebar appear second in mobile mode */
+    }
+}

@@ -15,7 +15,7 @@ const getPosts = async () => {
     //console.log(link);
 
     const data = await pullJsonFromLink(link);
-    console.log(data);
+    //console.log(data);
 
     return data;
 }

@@ -5,6 +5,10 @@
 ## Introduction
 Welcome to my evolving portfolio! Currently in its fifth iteration (portfoliov5), this repository reflects a journey of continuous growth and improvement. Explore the current version, or take a look back at previous iterations to see the transformation.
 
+> **Current Idea**: My current concept for my portfolio is to display a gif upon opening the website, displaying shots of me in my life enjoying hobbies, programming, etc. Then, an animation will take you down to the sidebar adjacent to the main content of my page. The sidebar will allow you to click through main content displays, which will dynamically change
+
+> The best current version is **[portfoliov4](portfoliov4)**
+
 ## Table of Contents
 - [Current Version: portfoliov5](#current-version-portfoliov5)
 - [Previous Versions](#previous-versions)

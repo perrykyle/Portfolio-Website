@@ -1,9 +1,45 @@
-# Portfolio-Website
+# My Portfolio: A Journey of Progress (Currently Developing: portfoliov6)
 
- Slowly developing my portfolio website using raw html css and js.
+![Portfolio Banner](portfolioV4/images/progress.PNG)
 
-I want to improve my UI skills and this project is to display my information as well as work on my portfolio
+## Introduction
+Welcome to my evolving portfolio! Currently in its fifth iteration (portfoliov5), this repository reflects a journey of continuous growth and improvement. Explore the current version, or take a look back at previous iterations to see the transformation.
 
-Each version I test new things and take what I like into the next version. Documenting in Github
+## Table of Contents
+- [Current Version: portfoliov5](#current-version-portfoliov5)
+- [Previous Versions](#previous-versions)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
 
-### Currently Developing PortfolioV5
+## Current Version: portfoliov5
+- **Overview**: Focusing on perfecting responsiveness as I have gotten down grid and site organizaton. 
+- **Features**: Responsive design that can accessed on both mobile and desktop.
+- **Progress**: Still kinking out bug fixes, but overall, I am happy with the progress I have made.
+
+![Current Version Image](portfolioV5/images/progress.gif)
+
+## Previous Versions
+### portfoliov5
+- **Highlights**: Responsive to mobile broswers as well as desktop, not fully implemented yet, doesn't include tab features from sidebar
+- **[View portfoliov5](portfoliov5)**
+
+### portfoliov4
+- **Highlights**: Includes functional tab features from side bar, lacks mobile responsiveness
+- **[View portfoliov4](link-to-portfoliov4)**
+
+### Previous portfolios
+- **Highlights**: Includes functional tab features from side bar, dynamically loads sidebar and values for main content, lacks mobile responsiveness
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Usage
+Test with live server on index.html for any version
+
+
+---
+
+Explore, enjoy, and feel free to connect with me for any inquiries or feedback!
